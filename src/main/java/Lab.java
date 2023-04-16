@@ -1,6 +1,6 @@
 
+import java.util.ArrayList;
 import java.util.List;
-
 /**
  * Lists are ordered collections. This means that we could access elements at a certain position of a list,
  * and lists are also allowed to contain duplicate values.
@@ -28,20 +28,19 @@ public class Lab {
      *
      * @return a List<Integer> object.
      */
-    public List<Integer> createList(){
-        return null;
+    public List<Integer> createList(){ 
+        List<Integer> list = new ArrayList<>();
+          return list;
     }
-
     /**
      * Get the size of a list.
      *
      * @param list a List<Integer> object.
      * @return the size of List (number of items it holds.)
      */
-    public int getSize(List<Integer> list){
-        return 0;
+    public int getSize(List<Integer> list){  
+          return list.size();
     }
-
     /**
      * Add an item to a list.
      * When we add a value to a list, it gets appended to the end.
@@ -51,8 +50,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addToList(List<Integer> list, int value){
+        list.add(value);
     }
-
     /**
      * Get a particular index of a list.
      * Lists, like arrays, are zero-indexed, so they start counting at zero. For instance,
@@ -66,7 +65,7 @@ public class Lab {
      * @return the int at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-        return 0;
+        return list.get(index);    
     }
 
     /**
@@ -78,10 +77,9 @@ public class Lab {
      * @param position represents the index of the element we would like to remove.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void removeFromList(List<Integer> list, int position){
-
+    public void removeFromList(List<Integer> list, int position){  
+        list.remove(position);
     }
-
     /**
      * Update an index of a list.
      * We can update a value in the list, which will overwrite a value at a certain position.
@@ -92,5 +90,6 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void updateAtPosition(List<Integer> list, int position, int value){
+        list.set(position, value);
     }
 }
